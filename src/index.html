@@ -11,22 +11,19 @@
   <div class="container">
     <h1>Bookmarks App</h1>
     <form id="js-bookmarks-form">
-      <div class="error-container">Some error text</div>
+      <div class="error-container" hidden>Some error text</div>
       <label for="bookmarks-entry"></label>
-      <input type="button" name="bookmarks-entry" class="js-bookmarks-entry" placeholder="e.g., broccoli" required>
-      <button type="submit">Add bookmark</button>
-    </form>
-    <div>
-      <label for="filter-rating">Filter by Rating</label>
-      <select id="filter-rating" name="filter-rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
+      <button type="submit" name="bookmarks-entry" class="js-bookmarks-entry">Add bookmark</button>
+      <label for="filter-rating"></label>
+      <select id="filter-rating" name="filter-rating" value="Rating" class="dropdown">
+          <option value="0">Filter Rating</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
       </select>
-      <input type="submit" id="filter-rating" class="filter-rating js-filter-rating" />
-    </div>
+    </form>
     <ul class="bookmarks-list js-bookmarks-list">
     </ul>
   </div>

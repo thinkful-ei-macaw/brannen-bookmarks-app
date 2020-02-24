@@ -1,13 +1,18 @@
-
+import $ from 'jquery';
+import api from './api';
+// import 'normalize.css';
+import './index.css';
+import store from './store';
+import bookmarklist from './bookmarks-list';
 
 const main = function () {
-  api.getItems()
-  .then((items) => {
-    items.forEach((item) => store.addItem(item));
-    shoppingList.render();
+  api.getBookmarks()
+  .then((bookmarks) => {
+    bookmarks.forEach((bookmark) => store.addItem(bookmark));
+    bookmarklist.render();
   });
-  shoppingList.bindEventListeners();
-  shoppingList.render();
+  bookmarklist.bindEventListeners();
+  bookmarklist.render();
   
 };
 
